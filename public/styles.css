@@ -1,0 +1,152 @@
+/* General Body Styling */
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: auto; /* Allow scrolling */
+}
+
+/* Splash Screen */
+#splashScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+}
+
+/* Home Page Content */
+#homePage {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in, visibility 0s linear 0.5s;
+}
+
+/* Splash Screen Text Animation */
+#splashScreen h1, #splashScreen p {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Home Page Animation */
+#homePage.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* General Styling for Forms */
+.container {
+    margin: 50px auto;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.breadcrumb {
+    font-size: 1.2em;
+    color: #FF6600;
+}
+
+.form-container {
+    background: #1E1E1E;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+button {
+    background: #FF6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: rgba(255, 102, 0, 0.7);
+    transform: scale(1.05);
+}
+
+/* Icon Styling */
+.form-group i {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: #FF6600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Styling for bold and orange "ADM Wi-Fi" */
+.bold-orange {
+    font-weight: bold;
+    color: #FF6600;  /* Orange color */
+}
+
+/* Overlay for Success Message */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 9999;
+}
+
+#overlay .overlay-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+#overlay .overlay-content h2 {
+    margin-bottom: 15px;
+}
+
+#overlay .overlay-content p {
+    margin-bottom: 20px;
+}

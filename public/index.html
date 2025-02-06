@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captive Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Splash Screen - Visible initially -->
+    <div id="splashScreen">
+        <h1>Welcome to ADM Wi-Fi</h1>
+        <p>Connecting you to the internet...</p>
+    </div>
+
+    <!-- Home Page Content, hidden initially -->
+    <div id="homePage" class="hidden">
+        <div class="container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb">
+                <span>Home</span> > <span>Registration</span> > <span class="active">Access</span>
+            </nav>
+
+            <div class="form-container">
+                <h1>Welcome to <br><span class="bold-orange">ADM Wi-Fi</span></h1>
+                <p>Please fill in your details to gain internet access.</p>
+
+                <!-- Form for Captive Portal -->
+                <form id="captiveForm">
+                    <div class="form-group">
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="cellNumber" placeholder="Cell Number" required>
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="age" placeholder="Age" required>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="form-group">
+                        <select id="gender">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <i class="fas fa-venus-mars"></i>
+                    </div>
+                    <div class="form-group">
+                        <select id="employment">
+                            <option value="">Employment Status</option>
+                            <option value="Employed">Employed</option>
+                            <option value="Unemployed">Unemployed</option>
+                            <option value="Student">Student</option>
+                        </select>
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <button type="submit" id="submitBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Overlay (hidden initially) -->
+    <div id="overlay" style="display: none;">
+        <div class="overlay-content">
+            <h2>Submission Successful!</h2>
+            <p>Your details have been successfully submitted.</p>
+        </div>
+    </div>
+
+    <!-- Linking JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
